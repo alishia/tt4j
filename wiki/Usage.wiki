@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary How to use TT4J
 
 =Usage=
 
@@ -6,17 +6,17 @@ The main class is `TreeTaggerWrapper`. One !TreeTagger process will be created a
 
 During analysis, two threads are used to communicate with the !TreeTagger. One process writes tokens to the !TreeTagger process, while the other receives the analyzed tokens.
 
-=Analyzing tokens=
+==Analyzing tokens==
 
 For easy integration into application, this class takes any object containing token information and either uses its `toString()` method or a `TokenAdapter` set using `setAdapter(TokenAdapter)` to extract the actual token. To receive the an analyzed token, set a custom `TokenHandler` using `setHandler(TokenHandler)`.
 
-=Locating executables and models=
+==Locating executables and models==
 
 Per default the !TreeTagger executable is searched for in the directories indicated by the system property `treetagger.home`, the environment variables `TREETAGGER_HOME` and `TAGDIR` in this order. A full path to a model file optionally appended by a : and the model encoding is expected by the `setModel(String)` method.
 
 For additional flexibility, register a custom `ExecutableResolver` using `setExecutableProvider(ExecutableResolver)` or a custom `ModelResolver` using `setModelProvider(ModelResolver)`. Custom providers may extract models and executable from archives or download them from some location and temporarily or permanently install them in the file system. A custom model resolver may also be used to resolve a language code (e.g. en) to a particular model.
 
-=Example=
+==Example==
 
 A simple illustration of how to use this class
 
