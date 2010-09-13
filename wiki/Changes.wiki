@@ -11,8 +11,8 @@
 
 =1.0.11 (2009-09-18)=
 
-   * Fixed bug: DefaultModelResolver uses wrong file name.
-   * Fixed bug: DefaultModelResolver fails on Windows when path contains a colon.
+   * Fixed bug: !DefaultModelResolver uses wrong file name.
+   * Fixed bug: !DefaultModelResolver fails on Windows when path contains a colon.
 
 =1.0.10 (2009-09-28)=
 
