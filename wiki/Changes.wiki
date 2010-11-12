@@ -1,6 +1,6 @@
 #summary Change Log
 
-=1.0.14 (2010-11-12=
+=1.0.14 (2010-11-12)=
 
   * Generate a better exception message when no model or executable could be found.
   * Provide getters for all properties of TreeTaggerWrapper.
