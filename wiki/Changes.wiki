@@ -1,5 +1,14 @@
 #summary Change Log
 
+=1.0.14 (2010-11-12=
+
+  * Generate a better exception message when no model or executable could be found.
+  * Provide getters for all properties of TreeTaggerWrapper.
+  * Updated license header and added it where missing.
+  * Fixed typo in Javadoc.
+  * Set plugin versions in POM to make Maven 3 happy.
+  * Set source encoding to UTF-8 in POM.
+
 =1.0.13 (2010-10-13)=
 
    * Fixed TT4J hanging indefinitely when writer thread crashes during processing.
