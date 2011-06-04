@@ -1,5 +1,11 @@
 #summary Change Log
 
+=1.0.15 (2011-06-03)=
+
+   * Added detection if communication with TreeTagger starts running out-of-sync due to some odd characters appearing in tokens. This can be disabled, but per default the strict-mode is on.
+   * Added setting for the maximal token length (default 90000 bytes) - TreeTagger seems to have a limit of 99998 bytes per token and crashes when this is exceeded
+   * Improved handling of crashed TreeTagger process
+
 =1.0.14 (2010-11-12)=
 
   * Generate a better exception message when no model or executable could be found.
