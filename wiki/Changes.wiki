@@ -1,5 +1,8 @@
 #summary Change Log
 
+=1.0.16 (2011-10-24)=
+   * Changed default flush sequence to work with the TreeTagger model for chinese
+ 
 =1.0.15 (2011-06-03)=
 
    * Added detection if communication with TreeTagger starts running out-of-sync due to some odd characters appearing in tokens. This can be disabled, but per default the strict-mode is on.
