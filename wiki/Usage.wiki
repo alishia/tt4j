@@ -30,6 +30,8 @@ For easy integration into application, this class takes any object containing to
 
 Since version 1.1.0, TT4J allows to fetch probabilities from !TreeTagger. To make use of this feature, a `TokenHandler` implementing the `ProbabilityHandler` interface must be passed to `setHandler(TokenHandler)` and a probability threshold must be set using `setProbabilityThreshold(Double)`. This corresponds to specifying the arguments `-prob -threshold <value>` of TreeTagger. During processing, TT4J first invokes `TokenHandler.token()` with the token, best tag and best lemma. Afterwards `ProbabilityHandler.probability()` is invoked for each tag/lemma/probability returned by !TreeTagger.
 
+*Note:* This feature requires a !TreeTagger binary newer than 2012-04-25. When used with previous version, it will just hang. At the time of writing, the !TreeTagger versions for OS X (Intel), Windows and Linux support this feature. It is possible that the versions for Solaris and OS X (PPC) may not be updated to support this feature.
+
 ==Locating executables and models==
 
 Per default the !TreeTagger executable is searched for in the directories indicated by the system property `treetagger.home`, the environment variables `TREETAGGER_HOME` and `TAGDIR` in this order. A full path to a model file optionally appended by a : and the model encoding is expected by the `setModel(String)` method.
