@@ -10,16 +10,6 @@ During analysis, two threads are used to communicate with the !TreeTagger. One p
 
 For easy integration into application, this class takes any object containing token information and either uses its `toString()` method or a `TokenAdapter` set using `setAdapter(TokenAdapter)` to extract the actual token. To receive the an analyzed token, set a custom `TokenHandler` using `setHandler(TokenHandler)`.
 
-==Locating executables and models==
-
-Per default the !TreeTagger executable is searched for in the directories indicated by the system property `treetagger.home`, the environment variables `TREETAGGER_HOME` and `TAGDIR` in this order. A full path to a model file optionally appended by a : and the model encoding is expected by the `setModel(String)` method.
-
-For additional flexibility, register a custom `ExecutableResolver` using `setExecutableProvider(ExecutableResolver)` or a custom `ModelResolver` using `setModelProvider(ModelResolver)`. Custom providers may extract models and executable from archives or download them from some location and temporarily or permanently install them in the file system. A custom model resolver may also be used to resolve a language code (e.g. en) to a particular model.
-
-==Example==
-
-A simple illustration of how to use this class
-
 {{{
  TreeTaggerWrapper tt = new TreeTaggerWrapper<String>();
  try {
@@ -35,3 +25,13 @@ A simple illustration of how to use this class
      tt.destroy();
  }
 }}}
+
+==Getting probabilities==
+
+Since version 1.1.0, TT4J allows to fetch probabilities from !TreeTagger. To make use of this feature, a `TokenHandler` implementing the `ProbabilityHandler` interface must be passed to `setHandler(TokenHandler)` and a probability threshold must be set using `setProbabilityThreshold(Double)`. This corresponds to specifying the arguments `-prob -threshold <value>` of TreeTagger. During processing, TT4J first invokes `TokenHandler.token()` with the token, best tag and best lemma. Afterwards `ProbabilityHandler.probability()` is invoked for each tag/lemma/probability returned by !TreeTagger.
+
+==Locating executables and models==
+
+Per default the !TreeTagger executable is searched for in the directories indicated by the system property `treetagger.home`, the environment variables `TREETAGGER_HOME` and `TAGDIR` in this order. A full path to a model file optionally appended by a : and the model encoding is expected by the `setModel(String)` method.
+
+For additional flexibility, register a custom `ExecutableResolver` using `setExecutableProvider(ExecutableResolver)` or a custom `ModelResolver` using `setModelProvider(ModelResolver)`. Custom providers may extract models and executable from archives or download them from some location and temporarily or permanently install them in the file system. A custom model resolver may also be used to resolve a language code (e.g. en) to a particular model.
