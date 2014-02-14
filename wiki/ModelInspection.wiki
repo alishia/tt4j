@@ -1,6 +1,6 @@
 #summary Inspecting TreeTagger models
 
-The following Groovy script prints some information about a given !TreeTagger model, e.g. version and dictionary sizes. Additionally, it extracts the dictionaries and tagset from the model and saves them to disk.
+The following [http://groovy.codehaus.org Groovy] script prints some information about a given !TreeTagger model, e.g. version and dictionary sizes. Additionally, it extracts the dictionaries and tagset from the model and saves them to disk.
 
 {{{
 #!/usr/bin/env groovy
