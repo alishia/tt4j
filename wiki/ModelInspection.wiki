@@ -34,17 +34,16 @@ println "  Tags       : ${model.tags.size()}"
 println "  Lemmas     : ${model.lemmas.size()}"
 println "  Tokens     : ${model.tokens.size()}"
 
-println "Writing dictionaries may take a while..."
+println "Writing dictionaries may take a while…"
+
 println "... writing tags ..."
 tags.delete()
 model.tags.each { tags << "${it}\n" } 
 
-println "Writing dictionaries may take a while..."
 println "... writing lemmas ..."
 lemmas.delete()
 model.lemmas.each { lemmas << "${it}\n" } 
 
-println "Writing dictionaries may take a while..."
 println "... writing tokens ..."
 tokens.delete()
 model.tokens.each { tokens << "${it}\n" } 
