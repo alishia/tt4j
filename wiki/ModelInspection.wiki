@@ -34,7 +34,7 @@ println "  Tags       : ${model.tags.size()}"
 println "  Lemmas     : ${model.lemmas.size()}"
 println "  Tokens     : ${model.tokens.size()}"
 
-println "Writing dictionaries may take a while…"
+println "Writing dictionaries may take a while..."
 
 println "... writing tags ..."
 tags.delete()
