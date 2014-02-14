@@ -1,5 +1,8 @@
 #summary Change Log
 
+=1.1.2 (2014-02-14)=
+   * Fixed bug: model files cannot be read unless assertions are enabled (Issue 16)
+
 =1.1.1 (2012-07-14)=
    * Initial support for reading !TreeTagger model files. (Issue 14)
 
