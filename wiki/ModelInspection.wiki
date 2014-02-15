@@ -11,11 +11,7 @@ The following [http://groovy.codehaus.org Groovy] script prints some information
  *
  * Gets information from a TreeTagger model. Dumps dictionaries to disk.
  */
-@GrabResolver(name='ukp-oss-snapshots',
-      root='http://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-snapshots')
-@Grab(group='org.annolab.tt4j', 
-      module='org.annolab.tt4j', 
-      version='1.1.2-SNAPSHOT')
+@Grab(group='org.annolab.tt4j', module='org.annolab.tt4j', version='1.1.2')
 import static org.annolab.tt4j.TreeTaggerModelUtil.*;
 
 def modelFile = new File(args[0]);
