@@ -1,5 +1,9 @@
 #summary Change Log
 
+=1.2.1 (2014-11-19)=
+   * Fix javadoc for building under Java 8 (Issue 18).
+   * Allow setting flush sequence in !DefaultModel (Issue 19).
+
 =1.2.0 (2014-08-17)=
    * Changed license to Apache License version 2. (Issue 17)
    * Note that !TreeTagger itself is subject different license terms available from the [http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/ TreeTagger website].
